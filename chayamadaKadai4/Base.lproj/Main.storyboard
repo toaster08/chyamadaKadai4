@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Counter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chayamadaKadai4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="chyamadaKadai4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Counter View" customClass="CountView" customModule="chyamadaKadai4" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ro9-B1-iFc" userLabel="Result Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ro9-B1-iFc" userLabel="Count Label">
                                 <rect key="frame" x="70" y="84" width="139.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -25,10 +25,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUV-0M-bUk" userLabel="CountUp Button">
                                 <rect key="frame" x="70" y="175" width="36" height="30"/>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pc7-zZ-Hee"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-bo-88a" userLabel="Clear Button">
                                 <rect key="frame" x="70" y="125" width="30" height="30"/>
                                 <state key="normal" title="+1"/>
+                                <connections>
+                                    <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoK-Xk-zw5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -43,16 +49,17 @@
                             <constraint firstItem="3ci-bo-88a" firstAttribute="leading" secondItem="ro9-B1-iFc" secondAttribute="leading" id="wAv-Fo-LGk"/>
                             <constraint firstItem="ro9-B1-iFc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="zer-qT-rHN"/>
                         </constraints>
+                        <connections>
+                            <outlet property="cLabel" destination="ro9-B1-iFc" id="XTi-0e-keO"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="clearButton" destination="hUV-0M-bUk" id="xul-4I-Lf3"/>
-                        <outlet property="countUpButton" destination="3ci-bo-88a" id="GKR-p1-8Tf"/>
-                        <outlet property="resultLabel" destination="ro9-B1-iFc" id="Ofs-t2-Dih"/>
+                        <outlet property="countView" destination="8bC-Xf-vdC" id="9sR-VX-Zak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="8"/>
+            <point key="canvasLocation" x="148" y="-347"/>
         </scene>
     </scenes>
     <resources>

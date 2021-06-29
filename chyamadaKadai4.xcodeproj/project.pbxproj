@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8565D7717DD43E064B7B67E6 /* Pods_chyamadaKadai4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07406B16EF8AD542E9621EC /* Pods_chyamadaKadai4.framework */; };
 		8AE32F85268A5FA50047011B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE32F84268A5FA50047011B /* AppDelegate.swift */; };
 		8AE32F87268A5FA50047011B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE32F86268A5FA50047011B /* SceneDelegate.swift */; };
 		8AE32F89268A5FA50047011B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE32F88268A5FA50047011B /* ViewController.swift */; };
 		8AE32F8C268A5FA50047011B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE32F8A268A5FA50047011B /* Main.storyboard */; };
 		8AE32F8E268A5FAA0047011B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE32F8D268A5FAA0047011B /* Assets.xcassets */; };
 		8AE32F91268A5FAA0047011B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE32F8F268A5FAA0047011B /* LaunchScreen.storyboard */; };
+		8AE32FBD268B360C0047011B /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE32FBC268B360C0047011B /* CountView.swift */; };
+		8AE32FC0268B36160047011B /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE32FBF268B36160047011B /* CounterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +26,8 @@
 		8AE32F8D268A5FAA0047011B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AE32F90268A5FAA0047011B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AE32F92268A5FAA0047011B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		970FD984F38CFFC3FB31D9B2 /* Pods-chyamadaKadai4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chyamadaKadai4.debug.xcconfig"; path = "Target Support Files/Pods-chyamadaKadai4/Pods-chyamadaKadai4.debug.xcconfig"; sourceTree = "<group>"; };
-		A07406B16EF8AD542E9621EC /* Pods_chyamadaKadai4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chyamadaKadai4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F241D50C99F1E99F3E95FF4A /* Pods-chyamadaKadai4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chyamadaKadai4.release.xcconfig"; path = "Target Support Files/Pods-chyamadaKadai4/Pods-chyamadaKadai4.release.xcconfig"; sourceTree = "<group>"; };
+		8AE32FBC268B360C0047011B /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
+		8AE32FBF268B36160047011B /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,26 +35,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8565D7717DD43E064B7B67E6 /* Pods_chyamadaKadai4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1EB2F7B0FAFCFACE49C2F7B8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A07406B16EF8AD542E9621EC /* Pods_chyamadaKadai4.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2713284086C945C8091F4D1C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				970FD984F38CFFC3FB31D9B2 /* Pods-chyamadaKadai4.debug.xcconfig */,
-				F241D50C99F1E99F3E95FF4A /* Pods-chyamadaKadai4.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -65,7 +54,6 @@
 				8AE32F83268A5FA50047011B /* chayamadaKadai4 */,
 				8AE32F82268A5FA50047011B /* Products */,
 				2713284086C945C8091F4D1C /* Pods */,
-				1EB2F7B0FAFCFACE49C2F7B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,15 +68,41 @@
 		8AE32F83268A5FA50047011B /* chayamadaKadai4 */ = {
 			isa = PBXGroup;
 			children = (
+				8AE32FB9268B35150047011B /* ViewController */,
+				8AE32FB7268B35010047011B /* View */,
+				8AE32FB6268B34F90047011B /* Model */,
 				8AE32F84268A5FA50047011B /* AppDelegate.swift */,
 				8AE32F86268A5FA50047011B /* SceneDelegate.swift */,
-				8AE32F88268A5FA50047011B /* ViewController.swift */,
 				8AE32F8A268A5FA50047011B /* Main.storyboard */,
 				8AE32F8D268A5FAA0047011B /* Assets.xcassets */,
 				8AE32F8F268A5FAA0047011B /* LaunchScreen.storyboard */,
 				8AE32F92268A5FAA0047011B /* Info.plist */,
 			);
 			path = chayamadaKadai4;
+			sourceTree = "<group>";
+		};
+		8AE32FB6268B34F90047011B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8AE32FBF268B36160047011B /* CounterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8AE32FB7268B35010047011B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AE32FBC268B360C0047011B /* CountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AE32FB9268B35150047011B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AE32F88268A5FA50047011B /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,7 +112,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AE32F95268A5FAA0047011B /* Build configuration list for PBXNativeTarget "chyamadaKadai4" */;
 			buildPhases = (
-				06C7DAD496A20A16D751D834 /* [CP] Check Pods Manifest.lock */,
 				8AE32F7D268A5FA50047011B /* Sources */,
 				8AE32F7E268A5FA50047011B /* Frameworks */,
 				8AE32F7F268A5FA50047011B /* Resources */,
@@ -159,28 +172,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06C7DAD496A20A16D751D834 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-chyamadaKadai4-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8AE32FA1268A714D0047011B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE32FBD268B360C0047011B /* CountView.swift in Sources */,
+				8AE32FC0268B36160047011B /* CounterModel.swift in Sources */,
 				8AE32F89268A5FA50047011B /* ViewController.swift in Sources */,
 				8AE32F85268A5FA50047011B /* AppDelegate.swift in Sources */,
 				8AE32F87268A5FA50047011B /* SceneDelegate.swift in Sources */,
@@ -351,7 +344,6 @@
 		};
 		8AE32F96268A5FAA0047011B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 970FD984F38CFFC3FB31D9B2 /* Pods-chyamadaKadai4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,7 +362,6 @@
 		};
 		8AE32F97268A5FAA0047011B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F241D50C99F1E99F3E95FF4A /* Pods-chyamadaKadai4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
